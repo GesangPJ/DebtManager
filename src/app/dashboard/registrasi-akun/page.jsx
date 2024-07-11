@@ -70,22 +70,22 @@ const RegistrasiAkun = () => {
 
       if (response.ok) {
         setAlert('success')
-        setMessage('Akun berhasil didaftarkan!')
+        setMessage('Account Registered Successfully!')
         formRef.current.reset() // Kosongkan form setelah berhasil didaftarkan
       } else {
         setAlert('error')
-        setMessage(result.error || 'Terjadi kesalahan saat mendaftarkan akun.')
+        setMessage(result.error || 'Error while registering account.')
       }
     } catch (error) {
       setAlert('error')
-      setMessage('Terjadi kesalahan saat mendaftarkan akun.')
+      setMessage('Error while registering account.')
     }
   }
 
   return (
     <div>
       <Card>
-        <CardHeader title='Registrasi Akun' />
+        <CardHeader title='Account Registration' />
         <CardContent>
           {alert && (
             <Alert severity={alert} style={{ marginBottom: '1rem' }}>
