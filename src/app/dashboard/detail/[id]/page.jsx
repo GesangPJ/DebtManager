@@ -23,9 +23,13 @@ import ExcelJS from 'exceljs'
 const formatDate = (dateString) => {
   if (!dateString) return 'Invalid Date'
   const date = new Date(dateString)
-  const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' }
+  const day = String(date.getDate()).padStart(2, '0')
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const year = date.getFullYear()
+  const hours = String(date.getHours()).padStart(2, '0')
+  const minutes = String(date.getMinutes()).padStart(2, '0')
 
-  return new Intl.DateTimeFormat('id-ID', options).format(date)
+  return `${day}-${month}-${year} ${hours}:${minutes}`
 }
 
 const formatCurrency = (amount) => {
