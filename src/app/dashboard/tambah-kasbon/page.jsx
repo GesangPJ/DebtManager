@@ -78,22 +78,22 @@ const TambahKasbon = () =>{
 
       if (response.ok) {
         setAlert('success')
-        setMessage('Permintaan Kasbon berhasil dikirim!')
+        setMessage('Debt Request sent!')
         formRef.current.reset() // Kosongkan form setelah berhasil didaftarkan
       } else {
         setAlert('error')
-        setMessage(result.error || 'Terjadi kesalahan saat mengirim data permintaan kasbon.')
+        setMessage(result.error || 'Error while trying to send debt request.')
       }
     } catch (error) {
       setAlert('error')
-      setMessage('Terjadi kesalahan saat mengirim data.')
+      setMessage('Error while trying to send debt request.')
     }
   }
 
   return(
     <div>
       <Card>
-        <CardHeader title='Form Permintaan Kasbon' />
+        <CardHeader title='Debt Request Form' />
         <CardContent>
           {alert && (
             <Alert severity={alert} style={{ marginBottom: '1rem' }}>
@@ -108,8 +108,8 @@ const TambahKasbon = () =>{
                   name='jumlah'
                   type='number'
                   fullWidth
-                  label='Jumlah'
-                  placeholder='Jumlah Kasbon'
+                  label='Amount'
+                  placeholder='Debt Amount'
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position='start'>
@@ -124,8 +124,8 @@ const TambahKasbon = () =>{
                   id='keterangan'
                   name='keterangan'
                   fullWidth
-                  label='Keterangan'
-                  placeholder='Keterangan'
+                  label='Information'
+                  placeholder='Information about the debt'
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position='start'>
@@ -137,10 +137,10 @@ const TambahKasbon = () =>{
               </Grid>
               <Grid item xs={12}>
                 <FormControl fullWidth>
-                  <InputLabel htmlFor='metode'>Metode</InputLabel>
+                  <InputLabel htmlFor='metode'>Method</InputLabel>
                   <Select
                     native
-                    label='Metode'
+                    label='Method'
                     defaultValue=''
                     inputProps={{
                       name: 'metode',
@@ -155,7 +155,7 @@ const TambahKasbon = () =>{
               </Grid>
               <Grid item xs={12} justifyContent="center" alignItems="center">
                 <Button variant='contained' type='submit'>
-                  Kirim
+                  Send
                 </Button>
               </Grid>
             </Grid>
