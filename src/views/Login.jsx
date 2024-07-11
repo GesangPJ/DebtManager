@@ -52,7 +52,7 @@ const Login = () => {
           <div className='flex flex-col gap-5'>
             <div className='items-center justify-center text-center'>
               <Typography variant='h4'><i className="ri-receipt-fill"></i> DEBT MANAGER</Typography>
-              <Typography className='mbs-1'>Sign In to yout account</Typography>
+              <Typography className='mbs-1'>Sign In to your account</Typography>
             </div>
             <form noValidate autoComplete='off' onSubmit={handleSubmit} className='flex flex-col gap-5'>
               <TextField
