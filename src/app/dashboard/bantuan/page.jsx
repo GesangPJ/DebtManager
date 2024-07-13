@@ -92,7 +92,7 @@ const HalamanBantuan = () =>{
           <div className="ml-[22px] pl-[22px] text-xl">
             <p>Below are the steps how to change user account data, the data that could be change are name and email :</p>
             <ol type="number">
-              <li>At sidebar, click Account Management</li>
+              <li>At sidebar, click Account.</li>
               <li>Click Account Table.</li>
               <li>At user account table, choose which account you want to change the data by click button <code>EDIT</code> at the same row.</li>
               <li>When there is a dialog box appear, change the name if you want to change the name by remove the old name and type new name.</li>
@@ -108,64 +108,60 @@ const HalamanBantuan = () =>{
           <div className="ml-[22px] pl-[22px] text-xl">
             <p>Below are the steps how to register new account, either for admin or user :</p>
             <ol type="number">
-              <li>On the sidebar click Account Management.</li>
+              <li>On the sidebar click Account.</li>
               <li>And then click Account Registration.</li>
-              <li>Kemudian masukkan nama di kolom <code>Nama Akun</code>.</li>
-              <li>Kemudian masukkan email di kolom <code>Email Akun</code>.</li>
-              <li>Kemudian masukkan password akun di kolom <code>Password</code>.</li>
-              <li>Kemudian pilih tipe akun, &quot;ADMIN&quot; atau &quot;KARYAWAN&quot;.</li>
-              <li>Lihat kembali data yang anda masukkan, jika sudah benar maka klik tombol <code>DAFTAR</code></li>
+              <li>And then type the name of the account on the field <code>Account Name</code>.</li>
+              <li>And then type the email of the account on the field <code>Account Email</code>.</li>
+              <li>And then type the password of the account on the field <code>Password</code>.</li>
+              <li>And then choose the account type, &quot;ADMIN&quot; or &quot;USER&quot;.</li>
+              <li>Make sure the data you insert is correct and then click button <code>Register</code></li>
             </ol>
           </div><br />
           <Typography variant="h3">
-            H. Reset Password Akun Karyawan
+            H. Reset User Password
           </Typography>
           <div className="ml-[22px] pl-[22px] text-xl">
-            <p>Berikut dibawah ini adalah bagaimana cara mengganti password akun karyawan :</p>
+            <p>Below are the steps how to change password for user account :</p>
             <ol type="number">
-              <li>Pada sidebar, klik Manajemen Akun.</li>
-              <li>Kemudian klik Reset Password Akun.</li>
-              <li>Masukkan email akun karyawan di kolom <code>Email Karyawan</code>.</li>
-              <li>Masukkan Password yang baru di kolom <code>Password</code>.</li>
-              <li>Masukkan kembali password yang baru di kolom <code>Konfirmasi Password</code>.</li>
-              <li>Jika data sudah benar maka klik tombol <code>Reset Password</code>.</li>
+              <li>On the sidebar click Account.</li>
+              <li>And then click Reset Password Account.</li>
+              <li>Type user email on the field <code>User Email</code>.</li>
+              <li>Type the new password on the field <code>Password</code>.</li>
+              <li>Type the new password again on the field <code>Password Confirmation</code>.</li>
+              <li>Make sure that you type or insert correct data, and then click button <code>Reset Password</code>.</li>
             </ol>
           </div><br />
           <Typography variant="h3">
-            I. Reset Password Akun Admin
+            I. Reset Admin Password
           </Typography>
           <div className="ml-[22px] pl-[22px] text-xl">
-            <p>Berikut dibawah ini adalah bagaimana cara mengganti password akun admin :</p>
+          <p>Below are the steps how to change password for admin account :</p>
             <ol type="number">
-              <li>Pada sidebar, klik Manajemen Akun.</li>
-              <li>Kemudian klik Reset Password Akun.</li>
-              <li>Masukkan Email Akun Admin di kolom <code>Email Admin</code>.</li>
-              <li>Masukkan Password admin yang baru di kolom <code>Password</code>.</li>
-              <li>Masukkan kembali passsword yang baru di kolom <code>Konfirmasi Password</code>.</li>
-              <li>Masukkan kode MasterKEY di kolom <code>Master Key</code>.</li>
-              <li>Jika data sudah benar, maka klik tombol <code>Reset Password Admin</code>.</li>
+              <li>On the sidebar click Account.</li>
+              <li>And then click Reset Password Account.</li>
+              <li>Type admin email on the field <code>User Email</code>.</li>
+              <li>Type the new password on the field <code>Password</code>.</li>
+              <li>Type the new password again on the field <code>Password Confirmation</code>.</li>
+              <li>Insert Master Key on the field <code>Master Key</code></li>
+              <li>Make sure that you type or insert correct data, and then click button <code>Reset Password</code>.</li>
             </ol>
           </div><br />
           <Divider />
           <br />
           <Typography variant="h3" sx={{fontWeight:'bold'}}>
-            Daftar Error
+            Error Lists
           </Typography><br />
           <Divider /><br />
           <div className="ml-[22px] pl-[22px] text-xl">
-          <p>Berikut dibawah ini adalah daftar error yang kemungkinan muncul beserta dengan penjelasan dan cara menanganinya :</p>
+          <p>Below is the error lists to show the meaning of the error and some how to handle the errors :</p>
           <ul>
-          <li><code className="text-red-600">MasterKEY Salah</code>: Master Key yang dimasukkan tidak sesuai dengan yang ada, cek kembali apakah master key yang dimasukkan sama dengan yang ada di <code>Environment Variable</code> website.</li>
-          <li><code className="text-red-600">Data Tidak Boleh Kosong</code>: Terdapat kolom yang kosong disaat akan mengirim / menyimpan data, cek kembali kolom mana yang kosong.</li>
-          <li><code className="text-red-600">Tidak Ada Data</code>: Data tidak ditemukan.</li>
-          <li><code className="text-red-600">No Rows</code>: Data tidak ditemukan.</li>
-          <li><code className="text-red-600">Gagal Menambahkan / Mengirim Data</code>: Terjadi kesalahan saat akan mengirim / menyimpan data, pastikan database terkoneksi dengan baik, jika anda menggunakan PostgreSQL pastika server PostgreSQL masih berjalan, atau pastikan anda masih terhubung ke internet.</li>
-
+          <li><code className="text-red-600">Wrong Master Key</code>: Master Key that you input is wrong, you can check the Master Key by asking the owner, Master Key location is on the <code>Environment Variable</code>of the website.</li>
+          <li><code className="text-red-600">Data cannot be empty</code>: There is a field on the form that is empty when sending the data, please check and make sure all the field on the form is filled.</li>
+          <li><code className="text-red-600">No Data</code>: No data found by the system, it&apos;s mean there are no actual data.</li>
+          <li><code className="text-red-600">No Rows</code>: No data found by the system, it&apos;s mean there are no actual data.</li>
+          <li><code className="text-red-600">Failed to send / adding new data</code>: There are error causing the data send to fail, if you are using PostgreSQL please make sure that your PostgreSQL server is still running and or the connection to your PostgreSQL server is ok, and if your PostgreSQL server is outside of your connection either on another network or on the cloud, please make sure that the website is online or connected to the internet.</li>
           </ul>
-
           </div>
-
-
         </Box>
       </div>
     </div>
