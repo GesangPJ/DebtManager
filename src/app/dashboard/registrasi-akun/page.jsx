@@ -117,7 +117,7 @@ const RegistrasiAkun = () => {
                   fullWidth
                   type='email'
                   label='Email'
-                  placeholder='Account Name'
+                  placeholder='Account Email'
                   InputProps={{
                     startAdornment: (
                       <InputAdornment position='start'>
