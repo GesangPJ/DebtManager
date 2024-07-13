@@ -7,7 +7,11 @@
 Debt / Loan Management Application further development from the previous version (Kasbon-JS),
 using NextJS 14 Full Stack with PostgreSQL or SQLite Database (will be available on another branch).
 
-https://github.com/GesangPJ/KasbonManajer/assets/26625652/bd2fe23c-ba7d-4281-9fc3-c162a7805261
+
+
+https://github.com/user-attachments/assets/e6ba58c3-ca6b-42d7-830d-752614df41be
+
+
 
 ## Website Features
 
