@@ -10,21 +10,21 @@ const HalamanBantuan = () =>{
       <div className=" justify-center items-center ">
         <Box sx={{ width: '100%'}} >
           <Typography variant="h2" sx={{fontWeight:'bold'}}>
-            Halaman Bantuan
+            Help Page
           </Typography>
           <Divider/>
           <br />
           <Typography variant="h3">
-            A. Menambahkan Kasbon
+            A. Adding New Debt
           </Typography><br />
           <div className="ml-[22px] pl-[22px] text-xl">
             <ol type="number">
-              <li>Karyawan Login.</li>
-              <li>Sidebar &gt; Menu Kasbon &gt; Tambah Kasbon.</li>
-              <li>Masukkan jumlah permintaan kasbon.</li>
-              <li>Masukkan Keterangan Kasbon.</li>
-              <li>Masukkan Metode Pembayaran Kasbon : <code>&quot;TRANSFER&quot; / &quot;CASH&quot;</code></li>
-              <li>Jika data yang dimasukkan sudah benar maka klik tombol <code>KIRIM</code></li>
+              <li>User Login.</li>
+              <li>Sidebar &gt; Debt Menu &gt; Add New Debt Request.</li>
+              <li>Input the debt request amount</li>
+              <li>Input the debt request information.</li>
+              <li>Choose the payment method : <code>&quot;TRANSFER&quot; or &quot;CASH&quot;</code></li>
+              <li>Make sure all the data is correct, then click <code>SEND</code></li>
             </ol>
           </div>
           <br />
@@ -32,85 +32,84 @@ const HalamanBantuan = () =>{
             B. Dashboard
           </Typography><br />
           <div className="ml-[22px] pl-[22px] text-xl">
-            <p>Adalah halaman yang berisi tabel data Kasbon, untuk Karyawan, data kasbon adalah
-              data milik masing-masing karyawan untuk Admin, dashboard berisi data semua kasbon yang masuk, yang terdiri dari :</p>
+            <p>Is a page that have debt data table, for user, debt data displayed is a data for each user, for admin, the debt data is data from all users.</p>
               <ol type="number">
-                <li><code>tanggal / jam :</code> Berisi data tanggal dan jam dimana data kasbon terakhir diubah.</li>
-                <li><code>nama :</code> Adalah nama Karyawan terdaftar yang meminta Kasbon.</li>
-                <li><code>jumlah :</code> Berisi Jumlah nilai Kasbon yang diminta.</li>
-                <li><code>status request :</code> Berisi keterangan status permintaan, seperti : &quot;BELUM&quot; ; &quot;SETUJU&quot; ; &quot;DITOLAK&quot; </li>
-                <li><code>status bayar :</code> Berisi keterangan status pembayaran kasbon, seperti : &quot;BELUM&quot; ; &quot;LUNAS&quot;</li>
-                <li><code>keterangan :</code> Adalah keterangan atau alasan mengenai permintaan kasbon, kenapa karyawan meminta kasbon sebesar jumlah yang diminta.</li>
-                <li><code>metode :</code> Adalah metode yang dipilih oleh Karyawan untuk membayar kasbon, seperti : &quot;TRANSFER&quot; ; &quot;CASH&quot;</li>
-                <li><code>admin :</code> Adalah nama Admin / Petugas yang mengubah status kasbon, nama yang ditampilkan adalah nama admin terbaru yang mengubah data status kasbon.</li>
-                <li><code>detail :</code> Adalah tombol yang digunakan untuk melihat Detail Kasbon ketika diklik / ditekan.</li>
+                <li><code>datetime</code>: A date and time when the debt data last modified.</li>
+                <li><code>name</code>: A name of the user who request the debt.</li>
+                <li><code>amount</code>: Total amount of debt requested by user.</li>
+                <li><code>request status</code>: A current status of debt requested by user : &quot;PENDING&quot; ; &quot;APPROVE&quot; ; &quot;REJECT&quot; </li>
+                <li><code>payment status</code>: A current status of debt payment : &quot;NOT PAID&quot; ; &quot;PAID&quot;</li>
+                <li><code>information</code>: A text by user to give information why user requested that amount of the debt.</li>
+                <li><code>method</code>: A payment method choosed by the user to pay the debt : &quot;TRANSFER&quot; ; &quot;CASH&quot;</li>
+                <li><code>admin</code>: A name of the admin who modified the latest status of the debt, could be request status or payment status.</li>
+                <li><code>detail</code>: A button to display the detail of the debt.</li>
               </ol><br />
               <p>Didalam Dashboard terdapat beberapa tombol, berikut adalah daftar tombol beserta dengan fungsinya :</p>
             <ul>
-              <li>Tombol <code>PDF Export :</code> Digunakan untuk ekspor / download data kasbon ke format PDF.</li>
-              <li>Tombol <code>Export XLSX :</code> Digunakan untuk ekspor / download data kasbon ke format Excel.</li>
-              <li>Tombol <code>JSON : </code> Digunakan untuk ekspor / download data kasbon ke format JSON.</li>
+              <li>Button <code>PDF Export :</code> Use for exporting the debt data into PDF Format.</li>
+              <li>Button <code>Export XLSX :</code>Use for exporting the debt data into Excel Format.</li>
+              <li>Button <code>JSON : </code> Use for exporting the debt data into JSON Format.</li>
             </ul>
           </div><br />
           <Typography variant="h3">
             C. Request Kasbon
           </Typography>
           <div className="ml-[22px] pl-[22px] text-xl">
-            <p>Adalah halaman yang digunakan oleh Admin untuk menentukan Status Request / permintaan Kasbon, halaman ini berisi tabel permintaan kasbon terbaru dengan status request awal &quot;BELUM&quot; . Kemudian admin akan menentukan apakah permintaan kasbon ini DISETUJUI atau DITOLAK dengan menekan salah satu tombol &quot;SETUJU&quot; atau &quot;TOLAK&quot;</p>
+            <p>A page use by admin to change the debt request status, default request status : &quot;PENDING&quot; . then admin will change which debt will be Approve or Reject using button &quot;APPROVE&quot; or &quot;REJECT&quot;</p>
           </div><br />
           <Typography variant="h3">
-            D. Konfirmasi Bayar
+            D. Payment Confirmation
           </Typography>
           <div className="ml-[22px] pl-[22px] text-xl">
-            <p>Adalah halaman yang digunakan oleh Admin untuk menentukan Status Bayar / pembayaran kasbon, berikut dibawah ini cara untuk merubah status bayar kasbon :</p>
+            <p>Is a page use by admin to confirm payment by user :</p>
             <ol type="number">
-              <li>Masukkan Nama Karyawan di Input Nama.</li>
-              <li>Tekan tombol <code>CARI</code>.</li>
-              <li>Kemudian data kasbon Karyawan yang anda cari akan muncul di tabel bawah.</li>
-              <li>Jika data kasbon tidak muncul, maka Kasbon Karyawan tersebut semuanya dalam status DITOLAK atau anda salah mengetik nama Karyawan.</li>
-              <li>Jika data karyawan ditampilkan maka anda bisa memilih Kasbon mana yang sudah lunas, maka anda klik tombol <code>LUNAS</code></li>
-              <li>Anda juga bisa mengganti status LUNAS menjadi BELUM dengan menekan tombol <code>BELUM</code></li>
+              <li>Insert the user name in the name field.</li>
+              <li>Press Button <code>Search Debt Data</code>.</li>
+              <li>And then the debt data of the user searched will be displayed under the table below search bar</li>
+              <li>If there are none debt data of the user that mean the user dont have any debt data that is APPROVED.</li>
+              <li>If there is data displayed, admin can choose which debt have been paid by the user by clicking button <code>PAID</code></li>
+              <li>Admin can also change payment status from PAID to NOT PAID using button <code>NOT PAID</code></li>
             </ol>
           </div><br />
           <Typography variant="h3">
-            E. Ekspor Laporan
+            E. Debt Report
           </Typography>
           <div className="ml-[22px] pl-[22px] text-xl">
-            <p>Adalah halaman yang digunakan untuk mengambil data kasbon per bulan dan tahun yang kemudian dapat diekspor / didownload ke berbagai format yang disediakan. Berikut dibawah ini adalah cara ekspor data :</p>
+            <p>Is a page to get debt data per month and admin can export it into some formats.</p>
             <ol type="number">
-              <li>Klik Ikon Kalender untuk menampilkan dialog Bulan dan Tahun / Ketik tahun dan bulan dalam format &quot;TAHUN-BULAN&quot;.</li>
-              <li>Untuk memilih tahun lainnya lewat dialog, klik tanda panah kebawah maka akan muncul daftar tahun.</li>
-              <li>Jika Bulan dan tahun telah dipilih / diketik, maka klik tombol <code>CARI DATA</code></li>
-              <li>Kemudian data kasbon untuk bulan dan tahun yang dipilih akan ditampilkan ditabel bawah.</li>
-              <li>Klik tombol <code>PDF Export</code> untuk download data kasbon dalam format PDF.</li>
-              <li>Klik tombol <code>Export XLSX</code> untuk download data kasbon dalam formal Excel.</li>
-              <li>Klik tombol <code>JSON</code> untuk download data kasbon dalam format JSON.</li>
+              <li>Click calendar icon to show the month chooser dialog / Type the month and year in format &quot;YEAR-MONTH&quot;.</li>
+              <li>To choose other year, click down arrow to show other years.</li>
+              <li>After choose the month and year, click button <code>SEARCH DEBT</code></li>
+              <li>And then the debt data will be displayed on the table below the search bar, if there are no data displayed, there&apos;s probably no debt data in that month or year.</li>
+              <li>Click Button <code>PDF Export</code> To download the debt data in format PDF.</li>
+              <li>Click Button <code>Export XLSX</code> To download the debt data in format Excel.</li>
+              <li>Click Button <code>JSON</code> To download the debt data in format JSON.</li>
             </ol>
           </div><br />
           <Typography variant="h3">
-            F. Ganti Data Akun Karyawan
+            F. Change User Account Data
           </Typography>
           <div className="ml-[22px] pl-[22px] text-xl">
-            <p>Berikut dibawah ini adalah cara bagaimana untuk mengganti data akun karyawan, data yang bisa diganti adalah nama dan email akun :</p>
+            <p>Below are the steps how to change user account data, the data that could be change are name and email :</p>
             <ol type="number">
-              <li>Pada sidebar klik Manajemen Akun.</li>
-              <li>Klik Tabel Akun.</li>
-              <li>Pada Tabel Akun Karyawan, lihat akun mana yang akan anda ganti datanya, kemudian klik tombol <code>EDIT</code> sesuai dengan baris akun yang ingin diganti datanya.</li>
-              <li>Pada dialog box yang muncul, jika nama yang diganti maka hapus nama awal kemudian ketik nama yang baru.</li>
-              <li>Pada dialog box yang muncul, jika email yang diganti maka hapus email awal kemudian ketik email yang baru.</li>
-              <li>Ketik MasterKEY yang disimpan di <code>ENVIRONMENT</code> website.</li>
-              <li>Jika dirasa data yang diganti sudah benar maka klik tombol <code>KIRIM</code>.</li>
-              <li>Jika tidak maka keluar dengan klik tombol <code>BATAL</code>.</li>
+              <li>At sidebar, click Account Management</li>
+              <li>Click Account Table.</li>
+              <li>At user account table, choose which account you want to change the data by click button <code>EDIT</code> at the same row.</li>
+              <li>When there is a dialog box appear, change the name if you want to change the name by remove the old name and type new name.</li>
+              <li>When there is a dialog box appear, change the email if you want to change the email by remove the old email and type new email.</li>
+              <li>Insert Master Key in Master Key field from, the key is from <code>ENVIRONMENT</code>of the website.</li>
+              <li>If you have change to the new data either name or email and you think that is correct, click button <code>SEND</code>.</li>
+              <li>If you change your mind and do not want to change the data, click button <code>CANCEL</code>.</li>
             </ol>
           </div><br />
           <Typography variant="h3">
-            G. Registrasi Akun
+            G. Account Registration
           </Typography>
           <div className="ml-[22px] pl-[22px] text-xl">
-            <p>Berikut dibawah ini adalah bagaimana cara mendaftarkan akun untuk Admin dan atau Karyawan :</p>
+            <p>Below are the steps how to register new account, either for admin or user :</p>
             <ol type="number">
-              <li>Pada sidebar, klik Manajemen Akun.</li>
-              <li>Kemudian klik Registrasi Akun.</li>
+              <li>On the sidebar click Account Management.</li>
+              <li>And then click Account Registration.</li>
               <li>Kemudian masukkan nama di kolom <code>Nama Akun</code>.</li>
               <li>Kemudian masukkan email di kolom <code>Email Akun</code>.</li>
               <li>Kemudian masukkan password akun di kolom <code>Password</code>.</li>
