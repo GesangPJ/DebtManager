@@ -86,12 +86,12 @@ const VerticalMenu = ({ scrollMenu }) => {
               <MenuItem href='/dashboard/cetak'>Debt Report</MenuItem>
             </SubMenu>
             <SubMenu
-              label='Account Management'
+              label='Account'
               icon={<i className='ri-account-circle-fill' />}
             >
               <MenuItem href='/dashboard/daftar-akun'>Account Table</MenuItem>
               <MenuItem href='/dashboard/registrasi-akun'>Account Registration</MenuItem>
-              <MenuItem href='/dashboard/reset-password-akun'>Account Password Reset</MenuItem>
+              <MenuItem href='/dashboard/reset-password-akun'>Reset Password Account</MenuItem>
             </SubMenu>
             <SubMenu
               label='Help'
@@ -113,10 +113,10 @@ const VerticalMenu = ({ scrollMenu }) => {
             </MenuItem>
             <MenuSection Label='Debt Menu'>
               <SubMenu
-                label='Kasbon'
+                label='Debt'
                 icon={<i className="ri-bill-line"></i>}
               >
-                <MenuItem href='/dashboard/tambah-kasbon'>Add Debt Request</MenuItem>
+                <MenuItem href='/dashboard/tambah-kasbon'>Add New Debt Request</MenuItem>
               </SubMenu>
               <SubMenu
               label='Help'
