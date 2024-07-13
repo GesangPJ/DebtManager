@@ -22,7 +22,7 @@ export const PUT = async (req) => {
     const { adminId, status_r, kasbonId } = await req.json()
 
     if (!adminId || !status_r || !kasbonId) {
-      return NextResponse.json({ error: "Data tidak boleh kosong" }, { status: 400 })
+      return NextResponse.json({ error: "Data cannot be empty!" }, { status: 400 })
     }
 
     const now = new Date()
@@ -38,11 +38,11 @@ export const PUT = async (req) => {
         },
       })
 
-      return NextResponse.json({ message: "Status berhasil diperbarui", kasbon }, { status: 200 })
+      return NextResponse.json({ message: "Status Successfully changed", kasbon }, { status: 200 })
     } catch (error) {
       console.error("Error updating kasbon:", error)
 
-      return NextResponse.json({ error: "Ada kesalahan ketika memperbarui status" }, { status: 500 })
+      return NextResponse.json({ error: "Error when trying to change status" }, { status: 500 })
     }
   } catch (error) {
     console.error("Error parsing request body:", error)
