@@ -75,8 +75,8 @@ Using this SQLite version does not require installing other databases like Postg
 11. Once everything is filled in and correct, run `npm install`.
 12. Then run `npx prisma migrate deploy`.
 13. Then run `npx prisma generate`.
-14. Once done, run npm run seedadmin to create an admin account.
-15. Then run npm run seedkaryawan to create an user account.
+14. Once done, run `npm run seedadmin` to create an admin account.
+15. Then run `npm run seeduser` to create an user account.
 16. The email and password of both accounts can be seen and changed in `/prisma/seedAdmin.js` and `/prisma/seedKaryawan.js`.
 17. Then build the project by running `npm run build`.
 
@@ -93,7 +93,7 @@ Using this SQLite version does not require installing other databases like Postg
 9. Then run `npx prisma migrate deploy`.
 10. Then run `npx prisma generate`.
 11. Once done, run `npm run seedadmin` to create an admin account.
-12. Then run `npm run seedkaryawan` to create an user account.
+12. Then run `npm run seeduser` to create an user account.
 13. The email and password of both accounts can be seen and changed in `/prisma/seedAdmin.js` and `/prisma/seedKaryawan.js`
 14. Then build the project by running `npm run build`.
 
