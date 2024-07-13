@@ -15,12 +15,12 @@ import Chip from '@mui/material/Chip'
 
 const getStatusChip = (status) => {
   switch (status) {
-    case 'BELUM':
-      return <Chip label="BELUM" color="warning" variant="outlined" icon= {<WarningAmberIcon/>} />
-    case 'SETUJU':
-      return <Chip label="SETUJU" color="success" variant="outlined" icon= {<CheckCircleOutlineIcon/>} />
-    case 'TOLAK':
-      return <Chip label="DITOLAK" color="error" variant="outlined"  icon= {<HighlightOffIcon/>} />
+    case 'PENDING':
+      return <Chip label="PENDING" color="warning" variant="outlined" icon= {<WarningAmberIcon/>} />
+    case 'APPROVE':
+      return <Chip label="APPROVED" color="success" variant="outlined" icon= {<CheckCircleOutlineIcon/>} />
+    case 'REJECT':
+      return <Chip label="REJECTED" color="error" variant="outlined"  icon= {<HighlightOffIcon/>} />
     default:
       return <Chip label="UNKNOWN" color="default" variant="outlined" />
   }
