@@ -20,7 +20,7 @@ export async function GET(req) {
 
   const { searchParams } = new URL(req.url)
   const namaKaryawan = decodeURIComponent(searchParams.get("namaKaryawan"))
-  const statusR = "SETUJU"
+  const statusR = "APPROVE"
 
   if (!namaKaryawan) {
     return NextResponse.json({ error: "Nama karyawan tidak ada" }, { status: 400 })
