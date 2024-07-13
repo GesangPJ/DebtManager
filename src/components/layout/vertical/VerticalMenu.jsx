@@ -80,7 +80,7 @@ const VerticalMenu = ({ scrollMenu }) => {
               </SubMenu>
             </MenuSection>
             <SubMenu
-              label='Laporan'
+              label='Report'
               icon={<i className='ri-file-chart-fill' />}
             >
               <MenuItem href='/dashboard/cetak'>Debt Report</MenuItem>
