@@ -20,7 +20,7 @@ export async function GET(req) {
 
   const { searchParams } = new URL(req.url)
   const userId = searchParams.get('userId')
-  const statusR = "BELUM"
+  const statusR = "PENDING"
 
   if (!userId) {
     return NextResponse.json({ error: 'User ID tidak ditemukan' }, { status: 400 })
